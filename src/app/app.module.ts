@@ -9,6 +9,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { DataProvider } from '../providers/data/data';
+import { SchedulePage } from '../pages/schedule/schedule';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,7 @@ import { DataProvider } from '../providers/data/data';
     DirectoryPage
   ],
   providers: [
-    StatusBar,
+    StatusBar,  
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     DataProvider
