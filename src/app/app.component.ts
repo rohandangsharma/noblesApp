@@ -1,9 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
-import { Nav, Platform } from 'ionic-angular';
+import { Nav, Platform, Icon } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-
-import { DirectoryPage } from '../pages/directory/directory';
 
 @Component({
   templateUrl: 'app.html'
@@ -13,17 +11,47 @@ export class MyApp {
 
   rootPage: any = 'SchedulePage';
 
-  pages: Array<{title: string, component: any}>;
+  menuPages: Array<{title: string, component: any, icon: string}>;
+  otherPages: Array<{title: string, component: any}>;
 
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
     this.initializeApp();
 
     // used for an example of ngFor and navigation
-    this.pages = [
-      { title: 'Schedule', component: 'SchedulePage' },
-      { title: 'Directory', component: DirectoryPage }
+    this.menuPages = [
+      {
+        title: 'Schedule',
+        component: 'SchedulePage',
+        icon: 'planet'
+      },
+      { 
+        title: 'Castle',
+        component: 'CastlePage',
+        icon: 'md-restaurant'
+      },
+      {
+        title: 'Calendar',
+        component: 'CalendarPage',
+        icon: 'md-calendar'
+      },
+      { 
+        title: 'Athletics',
+        component: 'AthleticsPage',
+        icon: 'md-american-football'
+      },
+      { 
+        title: 'Directory',
+        component: 'DirectoryPage',
+        icon: 'md-people'
+      }
     ];
 
+    this.otherPages = [
+      {
+        title: 'View Person',
+        component: 'ViewPersonPage'
+      }
+    ];
   }
 
   initializeApp() {

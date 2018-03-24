@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Castle</ion-title>
+  </ion-navbar>
+  
+  <ion-toolbar no-border-top>
+      <ion-segment [(ngModel)]="day">
+        <ion-segment-button value="monday">Mon</ion-segment-button>
+        <ion-segment-button value="tuesday">Tue</ion-segment-button>
+        <ion-segment-button value="wednesday">Wed</ion-segment-button>
+        <ion-segment-button value="thursday">Thu</ion-segment-button>
+        <ion-segment-button value="friday">Fri</ion-segment-button>
+        <ion-segment-button value="saturday">Sat</ion-segment-button>
+        <ion-segment-button value="sunday">Sun</ion-segment-button>
+
+        
+      </ion-segment>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <div [ngSwitch]="day">
+      <div *ngSwitchCase="'monday'">Monday Food</div>
+      <div *ngSwitchCase="'tuesday'">Tuesday Food</div>
+      <div *ngSwitchCase="'wednesday'">Wednesday Food</div>
+      <div *ngSwitchCase="'thursday'">Thursday Food</div>
+      <div *ngSwitchCase="'friday'">Friday Food</div>
+      <div *ngSwitchCase="'saturday'">Saturday Food</div>
+      <div *ngSwitchCase="'sunday'">Sunday Food</div>
+    </div>
+  
+  <ion-fab right bottom>
+    <button ion-fab color="primary"><ion-icon name="md-add"></ion-icon></button>
+  </ion-fab>
+</ion-content>

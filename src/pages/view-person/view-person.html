@@ -1,0 +1,35 @@
+<!--
+  Generated template for the ViewPersonPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>viewPerson</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <img src="http://www.nobles.edu/PeoplePhotos/{{user.image_id}}.jpeg" style="display:block;width:50%;height:auto;margin-left:auto;margin-right:auto;" />
+  <h1 id="viewPerson-heading2" style="color:#000000;">
+    {{user.first_name}} {{user.last_name}}
+  </h1>
+  <div id="viewPerson-markdown4" class="show-list-numbers-and-dots">
+    <p style="color:#000000;">
+      Grade: {{user.grade}}
+    </p>
+    <p style="color:#000000;">
+      Address: {{user.address}}, {{user.town}}, {{user.state}}
+    </p>
+    <p style="color:#000000;">
+      Home Phone: {{user.home_phone}}
+    </p>
+    <p style="color:#000000;">
+      Cell Phone: {{user.cell_phone}}
+    </p>
+  </div>
+</ion-content>

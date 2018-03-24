@@ -1,20 +1,24 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
-
 import { MyApp } from './app.component';
-import { DirectoryPage } from '../pages/directory/directory';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { DataProvider } from '../providers/data/data';
+
+//pages
 import { SchedulePage } from '../pages/schedule/schedule';
+import { DirectoryPage } from '../pages/directory/directory';
+import { AthleticsPage } from '../pages/athletics/athletics';
+import { CalendarPage } from '../pages/calendar/calendar';
+import { CastlePage } from '../pages/castle/castle';
+import { ViewPersonPage } from '../pages/view-person/view-person';
 
 @NgModule({
   declarations: [
     MyApp,
-    DirectoryPage
   ],
   imports: [
     BrowserModule,
@@ -25,7 +29,6 @@ import { SchedulePage } from '../pages/schedule/schedule';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    DirectoryPage
   ],
   providers: [
     StatusBar,  

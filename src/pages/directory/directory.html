@@ -1,61 +1,59 @@
 <ion-header>
-  <ion-navbar color="primary">
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>{{pageTitle}}</ion-title>
-  </ion-navbar>
-</ion-header>
-
-<ion-content padding>
-  <ion-list>
-    <ion-item>
-      <ion-input [(ngModel)]="firstName" type="text" placeholder="First Name"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-input [(ngModel)]="lastName" type="text" placeholder="Last Name"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-input type="text" placeholder="Sport"></ion-input>
-    </ion-item>
-  </ion-list>
-  <ion-list>
-    <ion-item>
-      <ion-label>Gender</ion-label>
-      <ion-select [(ngModel)]="gender">
-        <ion-option value="f">Female</ion-option>
-        <ion-option value="m">Male</ion-option>
-        <ion-option value="b">Both</ion-option>
-      </ion-select>
-    </ion-item>
-  </ion-list>
-  <ion-list>
-    <ion-item>
-      <ion-label>Class</ion-label>
-      <ion-select [(ngModel)]="class" multiple="true" cancelText="Cancel" okText="Done">
-        <ion-option value="1">I</ion-option>
-        <ion-option value="2">II</ion-option>
-        <ion-option value="3">III</ion-option>
-        <ion-option value="4">IV</ion-option>
-        <ion-option value="5">V</ion-option>
-        <ion-option value="6">VI</ion-option>
-      </ion-select>
-    </ion-item>
-  </ion-list>
-  <ion-row>
-    <ion-col>
-      <button ion-button color="secondary" round block outline icon-start (click)="doSearch()">
-        <ion-icon name='search'></ion-icon>
-        Search
+    <ion-navbar color="primary">
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
       </button>
-    </ion-col>
-    <ion-col>
-      <button ion-button color="danger" round block icon-start (click)="reset()">
-        <ion-icon name='trash'></ion-icon>
-        Reset
-      </button>
-    </ion-col>
-  </ion-row>
-</ion-content>
-
-
+      <ion-title>{{pageTitle}}</ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content padding>
+    <ion-list>
+      <ion-item>
+        <ion-input [(ngModel)]="firstName" type="text" placeholder="First Name"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input [(ngModel)]="lastName" type="text" placeholder="Last Name"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input [(ngModel)]="sport" type="text" placeholder="Sport"></ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-list>
+      <ion-item>
+        <ion-label>Gender</ion-label>
+        <ion-select [(ngModel)]="gender">
+          <ion-option value="f">Female</ion-option>
+          <ion-option value="m">Male</ion-option>
+          <ion-option value="b">Both</ion-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+    <ion-list>
+      <ion-item>
+        <ion-label>Class</ion-label>
+        <ion-select [(ngModel)]="class" multiple="true" cancelText="Cancel" okText="Done">
+          <ion-option value="1">I</ion-option>
+          <ion-option value="2">II</ion-option>
+          <ion-option value="3">III</ion-option>
+          <ion-option value="4">IV</ion-option>
+          <ion-option value="5">V</ion-option>
+          <ion-option value="6">VI</ion-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+    <ion-row>
+      <ion-col>
+        <button ion-button color="secondary" round block outline icon-start (click)="doSearch()">
+          <ion-icon name='md-search'></ion-icon>
+          Search
+        </button>
+      </ion-col>
+      <ion-col>
+        <button ion-button color="danger" round block icon-start (click)="reset()">
+          <ion-icon name='md-trash'></ion-icon>
+          Reset
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-content>
