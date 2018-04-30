@@ -8,6 +8,10 @@
   </ion-header>
   
   <ion-content padding>
+    <ion-segment [(ngModel)]="peopleType">
+      <ion-segment-button value="students">Students</ion-segment-button>
+      <ion-segment-button value="faculty">Faculty</ion-segment-button>
+    </ion-segment>
     <ion-list>
       <ion-item>
         <ion-input [(ngModel)]="firstName" type="text" placeholder="First Name"></ion-input>

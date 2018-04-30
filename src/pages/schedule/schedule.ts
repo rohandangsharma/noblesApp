@@ -18,5 +18,4 @@ export class SchedulePage {
   openCalendar(){
     alert("alert");
   }
-
 }
