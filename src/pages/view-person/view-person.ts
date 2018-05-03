@@ -15,7 +15,6 @@ import { DataProvider } from "../../providers/data/data"
   templateUrl: 'view-person.html',
 })
 export class ViewPersonPage {
-  hello:string = "hellO";
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public DataProvider: DataProvider) {
   }

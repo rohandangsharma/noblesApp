@@ -8,9 +8,9 @@
   </ion-header>
   
   <ion-content padding>
-    <ion-segment [(ngModel)]="peopleType">
-      <ion-segment-button value="students">Students</ion-segment-button>
-      <ion-segment-button value="faculty">Faculty</ion-segment-button>
+    <ion-segment [(ngModel)]="personType">
+      <ion-segment-button value="Student">Students</ion-segment-button>
+      <ion-segment-button value="Faculty">Faculty</ion-segment-button>
     </ion-segment>
     <ion-list>
       <ion-item>
@@ -48,7 +48,7 @@
     </ion-list>
     <ion-row>
       <ion-col>
-        <button ion-button color="secondary" round block outline icon-start (click)="doSearch()">
+        <button ion-button color="secondary" round block outline icon-start (click)="search()">
           <ion-icon name='md-search'></ion-icon>
           Search
         </button>

@@ -15,10 +15,16 @@ import { AthleticsPage } from '../pages/athletics/athletics';
 import { CalendarPage } from '../pages/calendar/calendar';
 import { CastlePage } from '../pages/castle/castle';
 import { ViewPersonPage } from '../pages/view-person/view-person';
+import { ReservationPage } from '../pages/reservation/reservation';
+import { DirectoryListPage } from '../pages/directory-list/directory-list';
+import { MakeResPage } from '../pages/make-res/make-res';
 
 @NgModule({
   declarations: [
     MyApp,
+    ReservationPage,
+    DirectoryListPage,
+    MakeResPage,
   ],
   imports: [
     BrowserModule,
@@ -29,6 +35,9 @@ import { ViewPersonPage } from '../pages/view-person/view-person';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
+    ReservationPage,
+    DirectoryListPage,
+    MakeResPage,
   ],
   providers: [
     StatusBar,  

@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { DataProvider } from '../../providers/data/data';
 import { HttpClient } from '@angular/common/http';
 import { CastlePageModule } from './castle.module';
+import { ReservationPage } from '../reservation/reservation'
 
 /**
  * Generated class for the CastlePage page.
@@ -22,29 +23,25 @@ export class CastlePage {
   date: string;
 
   meal: string = "Lunch";
-
   dates:Array<Date> = new Array;
-
   weekdays:Array<string> = new Array('sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday');
 
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public DataProvider: DataProvider, public http: HttpClient) {
     
     let today = new Date; // get current date
-    let first = (today.getDate() - today.getDay())+1;
+    let first = (today.getDate() - today.getDay())+1; //Monday
     
     if (today.getDay()!=0 && today.getDay()!=6){
-      this.dayName=this.weekdays[today.getDay()];
+      this.dayName=this.weekdays[today.getDay()]; //If not a weekend, set dayName to today
     }
-    this.date = today.getMonth()+1 + "/" + today.getDate();
+    this.date = today.getMonth()+1 + "/" + today.getDate(); //date in M/D format
     
+    //Make Array of Dates for the week
     for (let i=0; i<5; i++){
-      console.log(today);  
       let hello = new Date;
       this.dates[i]= new Date(hello.setDate(first+i));
     }
-    console.log(this.dates);
-
   }
 
   ionViewDidLoad() {
@@ -52,6 +49,7 @@ export class CastlePage {
     this.getFood(this.dayName);
   }
 
+  //Lunch and Dinner Toggle
   setMeal(){
     if(this.meal = "Lunch"){
       this.meal = "Dinner";
@@ -61,6 +59,7 @@ export class CastlePage {
     }
   }
 
+  //Set HTML to responseText of API
   getFood(day:string) {
     let xhttp = new XMLHttpRequest();
     let url = "https://nobilis.nobles.edu/skyworld/castlemenu.php?DisplayType=Phone";
@@ -70,9 +69,6 @@ export class CastlePage {
     url+="&mealType=" + this.meal;
     url+="&Date=" + this.date;
 
-    
-    console.log(url);
-
     xhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
         document.getElementById(day).innerHTML= this.responseText;
@@ -81,5 +77,10 @@ export class CastlePage {
     xhttp.open("GET", url, true);
     xhttp.send();
   }
-}
 
+  openReservation() {
+    this.navCtrl.push(ReservationPage)
+  }
+
+  
+}

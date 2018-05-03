@@ -9,17 +9,59 @@
       <button ion-button menuToggle>
         <ion-icon name="menu"></ion-icon>
       </button>
-      <ion-title>ViewPerson</ion-title>
+      <ion-title>About {{DataProvider.FirstName}}</ion-title>
     </ion-navbar>
 </ion-header>
   
 
-<ion-content padding>
-  <img src="http://www.nobles.edu/PeoplePhotos/{{DataProvider.PeopleID}}.jpeg" style="display:block;width:50%;height:auto;margin-left:auto;margin-right:auto;" />
-    <p style="color:#000000;">
-      Address: {{DataProvider.FirstName}}
-      
-    </p>
+<ion-content>
+    <div class="bkg" style="background-image: url(http://www.nobles.edu/PeoplePhotos/27354.jpeg);">
+      <img class="profile" src="http://www.nobles.edu/PeoplePhotos/{{DataProvider.PeopleID}}.jpeg" style="display:block;width:50%;height:auto;margin-left:auto;margin-right:auto;" />
+    </div>
+    <ion-content padding>
+      <ion-grid>
+        <ion-row>
+            <ion-col>
+              <button class="buttons" ion-button color="dark" clear icon-only>
+                <ion-icon name='md-chatbubbles' is-active="false"></ion-icon>
+              </button>
+            </ion-col>
+            <ion-col>
+              <button class="buttons" ion-button color="dark" clear icon-only>
+                <ion-icon name='md-call' is-active="false"></ion-icon>
+              </button>
+            </ion-col>
+            <ion-col>
+              <button class="buttons" ion-button color="dark" clear icon-only>
+                <ion-icon name='md-mail' is-active="false"></ion-icon>
+              </button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+        
+        
+        
+    
+        
+        <ion-item>
+            <ion-label stacked>First Name</ion-label>
+            <ion-label>{{DataProvider.FirstName}}</ion-label>
+        </ion-item>
+        <ion-item>
+            <ion-label stacked>UNID</ion-label>
+            <ion-label>{{DataProvider.UNID}}</ion-label>
+        </ion-item>
+    </ion-content>
+</ion-content>
+
+  
+    
+    
+    
+      <!-- <ion-item>
+        <ion-label stacked>Password</ion-label>
+        <ion-input type="password"></ion-input>
+      </ion-item> -->
   <!-- <img src="http://www.nobles.edu/PeoplePhotos/{{user.image_id}}.jpeg" style="display:block;width:50%;height:auto;margin-left:auto;margin-right:auto;" />
   <h1 id="viewPerson-heading2" style="color:#000000;">
     {{user.first_name}} {{user.last_name}}
@@ -38,4 +80,4 @@
       Cell Phone: {{user.cell_phone}}
     </p>
   </div> -->
-</ion-content>
+

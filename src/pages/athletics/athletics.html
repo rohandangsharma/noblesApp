@@ -1,10 +1,5 @@
-<ion-header>
-  <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>Athletics</ion-title>
-  </ion-navbar>
-</ion-header>
-<ion-content padding>
-</ion-content>
+<ion-tabs>
+    <ion-tab [root]="mySportsRoot" tabTitle="My Sports" tabIcon="md-body"></ion-tab>
+    <ion-tab [root]="scoresRoot" tabTitle="Scores" tabIcon="information-circle"></ion-tab>
+    <ion-tab [root]="upcomingRoot" tabTitle="Upcoming" tabIcon="information-circle"></ion-tab>
+</ion-tabs>

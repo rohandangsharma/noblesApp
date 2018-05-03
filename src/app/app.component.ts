@@ -2,6 +2,7 @@ import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform, Icon } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { DataProvider } from '../providers/data/data';
 
 @Component({
   templateUrl: 'app.html'
@@ -11,10 +12,12 @@ export class MyApp {
 
   rootPage: any = 'SchedulePage';
 
+  image:string = this.DataProvider.Photo;
+
   menuPages: Array<{title: string, component: any, icon: string}>;
   otherPages: Array<{title: string, component: any}>;
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
+  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen, public DataProvider: DataProvider) {
     this.initializeApp();
 
     // used for an example of ngFor and navigation
@@ -22,7 +25,7 @@ export class MyApp {
       {
         title: 'Schedule',
         component: 'SchedulePage',
-        icon: 'planet'
+        icon: 'md-clock'
       },
       { 
         title: 'Castle',
@@ -50,6 +53,14 @@ export class MyApp {
       {
         title: 'View Person',
         component: 'ViewPersonPage'
+      },
+      {
+        title: 'Reservation',
+        component: 'ReservationPage'
+      },
+      {
+        title: 'DirectoryList',
+        component: 'DirectoryListPage'
       }
     ];
   }
@@ -60,6 +71,7 @@ export class MyApp {
       // Here you can do any higher level native things you might need.
       this.statusBar.styleDefault();
       this.splashScreen.hide();
+      this.DataProvider.getDataFromApi("mary65Mk");
     });
   }
 

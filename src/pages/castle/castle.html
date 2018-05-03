@@ -4,6 +4,11 @@
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>Castle</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only color="royal" (click)="openReservation()">
+        Reservation
+      </button>
+    </ion-buttons>
   </ion-navbar>
   
   <ion-toolbar no-border-top>
@@ -20,14 +25,15 @@
 <ion-content padding>
     <button ion-button round (click)="setMeal()">See {{meal}}</button>
     <div [ngSwitch]="dayName">
-      <div id="monday" *ngSwitchCase="'monday'">Monday Food</div>
-      <div id="tuesday" *ngSwitchCase="'tuesday'">Tuesday Food</div>
-      <div id="wednesday" *ngSwitchCase="'wednesday'">Wednesday Food</div>
-      <div id="thursday" *ngSwitchCase="'thursday'">Thursday Food</div>
-      <div id="friday" *ngSwitchCase="'friday'">Friday Food</div>
+      <div id="monday" *ngSwitchCase="'monday'">Monday Food Loading</div>
+      <div id="tuesday" *ngSwitchCase="'tuesday'">Tuesday Food Loading</div>
+      <div id="wednesday" *ngSwitchCase="'wednesday'">Wednesday Food Loading</div>
+      <div id="thursday" *ngSwitchCase="'thursday'">Thursday Food Loading</div>
+      <div id="friday" *ngSwitchCase="'friday'">Friday Food Loading</div>
     </div>
-  
-  <ion-fab right bottom>
-    <button ion-fab color="primary"><ion-icon name="md-add"></ion-icon></button>
-  </ion-fab>
+    <div class="timing">
+      <p>Breakfast: Monday-Friday 7:00am - 7:45am</p>
+      <p>Lunch: Monday-Friday 11:00am - 1:30pm</p>
+      <p>Dinner: Monday-Thursday 5:15pm - 7:00pm</p>
+    </div>
 </ion-content>
