@@ -5,7 +5,7 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="dark">
       <button ion-button menuToggle>
         <ion-icon name="menu"></ion-icon>
       </button>
@@ -14,6 +14,36 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content>
+  <!-- <img class="bkg" src="http://www.nobles.edu/imageassets/_3952865831.jpg"> -->
+  <img class="bkg" src="http://www.nobles.edu/imageassets/FNL-12.jpg">
+  <ion-card *ngFor="let s of schools">
+    <ion-card-header>Boys Varsity Football</ion-card-header>
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+            <ion-col>
+                <img class ="logo" src="https://d3oiiej22pa06r.cloudfront.net/uploads/community/logo/192/nobles-logo.png">
+            </ion-col>
+            <ion-col>
+                <p class="score">28-13</p>
+            </ion-col>
+            <ion-col>
+                <img class ="logo" src={{s.image}}>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <p class="name">Nobles</p>
+            </ion-col>
+            <ion-col>
 
+            </ion-col>
+            <ion-col>
+              <p class="name">{{s.name}}</p>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+    </ion-card-content>
+  </ion-card>
 </ion-content>

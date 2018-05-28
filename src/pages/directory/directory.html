@@ -27,9 +27,9 @@
       <ion-item>
         <ion-label>Gender</ion-label>
         <ion-select [(ngModel)]="gender">
-          <ion-option value="f">Female</ion-option>
-          <ion-option value="m">Male</ion-option>
-          <ion-option value="b">Both</ion-option>
+          <ion-option value="Female">Female</ion-option>
+          <ion-option value="Male">Male</ion-option>
+          <ion-option value="">Both</ion-option>
         </ion-select>
       </ion-item>
     </ion-list>
@@ -48,7 +48,7 @@
     </ion-list>
     <ion-row>
       <ion-col>
-        <button ion-button color="secondary" round block outline icon-start (click)="search()">
+        <button ion-button color="secondary" round block outline icon-start (click)="getDirectoryData()">
           <ion-icon name='md-search'></ion-icon>
           Search
         </button>

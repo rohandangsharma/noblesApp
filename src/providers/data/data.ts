@@ -5,6 +5,7 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class DataProvider {
 
+  //User information
   PersonType:string;
   FirstName:string;
   UNID:string;
@@ -18,17 +19,23 @@ export class DataProvider {
   AssemblySeat:string;
   Photo:string;
 
+  //school year information
+  Season:string;
+
+  
+
   foodData:string;
 
   userPin:string = "mary65Mk";
 
-  apiUrlPrefix: string = "https://nobilis.nobles.edu/iosnoblesappweb/aboutme.php?iosPIN=";
+  aboutmePrefix: string = "https://nobilis.nobles.edu/iosnoblesappweb/aboutme.php?iosPIN=";
+  yearPrefix: string = "https://nobilis.nobles.edu/iosnoblesappweb/xmlAcademicYears.php?iosPIN=";
   constructor(public http: HttpClient) {
     console.log('Hello DataProvider Provider');
   }
 
   getDataFromApi(pin:string) {
-    const url = this.apiUrlPrefix + pin;
+    const url = this.aboutmePrefix + pin;
     console.log('final url ', url);
     //return "hello";
     this.http.get(url, {responseType: 'text'}).subscribe(output=>{
@@ -53,4 +60,44 @@ export class DataProvider {
       console.log('errors', error);
     });
   }
+
+  search(personType:string, first:string, last:string, gender:string ){
+    let url = "https://nobilis.nobles.edu/iosNoblesAppWeb/xmlDirectory.php?iosPIN=" + "mary65Mk" + "&PersonType=";
+
+    url+=personType;
+    if(first.length>0){
+      url+= "&FirstName=" + first;
+    }
+    if(last.length>0){
+      url+= "&LastName=" + last;
+    }
+    if(gender.length>0){
+      url+="&Gender=" + gender;
+    }
+    console.log(url);
+   return this.http.get(url, {responseType: 'text'});
+  }
+
+  games(){
+    let url = "https://nobilis.nobles.edu/webservices/gameschedule.php?startDate=4/12/2018&eventtypes=GamesAndPractices";
+    console.log(url);
+    return this.http.get(url, {responseType: 'text'});
+  }
+
+  getSeason(pin:string) {
+    const url = this.yearPrefix + pin;
+    console.log('final url ', url);
+    //return "hello";
+    this.http.get(url, {responseType: 'text'}).subscribe(output=>{
+      //let temp = JSON.stringify(output);
+      output => output.text();
+      var array = output.split("##");
+      this.Season=array[3].substring(15);
+      console.log("Current Season: " + this.Season);
+    }, (error)=>{
+      console.log('errors', error);
+    });
+  }
+
+  
 }

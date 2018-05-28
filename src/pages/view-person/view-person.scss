@@ -1,33 +1,125 @@
 page-view-person {
 
+    .bkg{
+        content: "";
+        position: fixed;
+        left: 0;
+        right: 0;
+        z-index: -1;
+        
+        //display: block;
+        
+        // background-image: url('https://cdn.cnn.com/cnnnext/dam/assets/150103074330-hubble-space-background-2-full-169.jpg');
+        //width: 1200px;
+        //height: 800px;
+        
+        filter: brightness(50%) blur(10px);
 
-    .bkg { 
-        background: 50% 50% no-repeat; /* 50% 50% centers image in div */
-        width: 100%;
-        height: 40%;
-        //-webkit-filter: blur(5px);
-        filter: blur(26px);
-        }
-    img{
-        // border-radius: 50%;
+        // -webkit-filter: blur(20px);
+        //  -moz-filter: blur(20px);
+        // -o-filter: blur(20px);
+        // -ms-filter: blur(20px);
+
+        
+
+        //background: 50% 50% no-repeat; /* 50% 50% centers image in div */
+        // background-size: cover;
+        background-repeat: no-repeat;
+        // width: 100%;
+        height: 60%;
+        // vertical-align: center;
+        background-position: 50% 50%;
+    }
+
+    .circular--portrait {
+        position: relative;
+        width: 150px;
+        height: 150px;
+        overflow: hidden;
+        border-radius: 50%;
+
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        text-align: center;
+
+        object-fit: cover;
+        background-size:cover;
+
         background: 50% 50% no-repeat;
-        height:20%;
-        width:10%;
+        border:1.5px solid white;
+    
+    }
+
+    .circular--portrait img{
+        width: 100%;
+        height: auto;
+        margin-bottom:0px;
+        
+    }
+
+    // .profile img{
+    //     // height:30%;
+    //     // width:30%;
+    //     // border-radius:50%;
+    // }
+    .profile{
+        //border-radius: 50%;
+        // // background: 50% 50% no-repeat;
+        // height:200px;
+        // width:100px;
         // height: 80%;
-        // all: initial;
+        //all: initial;
+        text-align: center;
+
+        height:40%;
+        //width:50%;
+
+        //position:fixed;
+        // left:0;
+        // top:0;
+
+        z-index: 0;
         // filter: none;
         // object-fit: cover;
-        // background-size:cover;
+        //background-size:cover;
+
+        //vertical-align: center;
+
+        display:flex;
+        align-items:center;
+        align-content:center;
+        //display: inline-block;
+        //text-align:center;
+
+
+
+        background: 50% 50% no-repeat;
+        // height:20%;
+        // width:10%;
+        // height: 80%;
+        //all: initial;
+        //filter: none;
+        //object-fit: cover;
+        //background-size:cover;
+
     }
 
     .buttons{
-        
-        position: absolute;
+        //position: absolute;
+        display: inline-block;
         margin: auto;
         top: 0;
         bottom: 0;
+        vertical-align: middle;
+
+        text-align: center;
         // width: 100px;
         // height: 100px; 
+    }
+
+    .buttonWrap{
+        text-align: center;
     }
 
     
@@ -39,3 +131,52 @@ page-view-person {
     // }
     
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .bkg { 
+//     background: 50% 50% no-repeat; /* 50% 50% centers image in div */
+//     width: 100%;
+//     height: 40%;
+//     //-webkit-filter: blur(5px);
+//     filter: blur(26px);
+//     }
+// img{
+//     // border-radius: 50%;
+//     background: 50% 50% no-repeat;
+//     height:20%;
+//     width:10%;
+//     // height: 80%;
+//     // all: initial;
+//     // filter: none;
+//     // object-fit: cover;
+//     // background-size:cover;
+// }
+
+// .buttons{
+    
+//     position: absolute;
+//     margin: auto;
+//     top: 0;
+//     bottom: 0;
+//     // width: 100px;
+//     // height: 100px; 
+// }
+
+
+
+// // img {
+    
+// //     position: relative;
+// //     border-radius: 50%;
+// // }

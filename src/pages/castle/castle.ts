@@ -19,7 +19,7 @@ import { ReservationPage } from '../reservation/reservation'
 
 export class CastlePage {
   day: number;
-  dayName: string = "monday";
+  dayName: string = "friday";
   date: string;
 
   meal: string = "Lunch";
@@ -55,7 +55,7 @@ export class CastlePage {
       this.meal = "Dinner";
     }
     else{
-      this.meal="Lunch";
+      this.meal = "Lunch";
     }
   }
 

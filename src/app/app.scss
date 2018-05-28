@@ -16,6 +16,95 @@
 // automatically applied to the <body> element in the app.
 
 ion-list{
-    background: black;
+    //background: blueviolet;
     //#153f7f
+}
+
+// .thumb{
+//     background-image: url('http://www.nobles.edu/PeoplePhotos/27354.jpeg'); 
+//     width:200px; 
+//     height:200px; 
+//     overflow:hidden;
+//     //background-position:center;
+// }
+
+// .thumb img {
+//     width: 400px;
+//     height: 300px;
+//     margin: -75px 0 0 -100px;
+// }
+
+.menu {
+    // -webkit-font-smoothing:antialiased;
+    // font-weight:200;
+    // background-image: url("https://www.shawmut.com/assets/images/back_end/portfolio/1_1430422410_Noble-3");
+    
+    // background-position: -750px;
+    // background-position-y: 200px;
+    // left:0;
+    // top:0;
+
+    background-image:  url("http://www.planwallpaper.com/static/images/colorful-triangles-background_yB0qTG6.jpg");
+    background-repeat: repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    height: 100%;
+    position: absolute;
+}
+
+.nav {
+    background-color: transparent !important;
+    margin-bottom:20px;
+    color: #FFF;
+    //opacity: 0.5;
+}
+.topNav{
+    background-color: transparent !important;
+    // margin-top:15px;
+    color:#FFF;
+}
+
+.thumb{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 50%;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align: center;
+
+    object-fit: cover;
+    background-size:cover;
+
+    background: 50% 50% no-repeat;
+}
+
+.circular--portrait {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 50%;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align: center;
+
+    object-fit: cover;
+    background-size:cover;
+
+    background: 50% 50% no-repeat;
+
+
+}
+
+.circular--portrait img{
+    width: 100%;
+    height: auto;
+    margin-bottom:0px;
 }

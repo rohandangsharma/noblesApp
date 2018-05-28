@@ -18,6 +18,7 @@ import { ViewPersonPage } from '../pages/view-person/view-person';
 import { ReservationPage } from '../pages/reservation/reservation';
 import { DirectoryListPage } from '../pages/directory-list/directory-list';
 import { MakeResPage } from '../pages/make-res/make-res';
+import { ViewPersonPageModule } from '../pages/view-person/view-person.module';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { MakeResPage } from '../pages/make-res/make-res';
     HttpClientModule,
     FormsModule,
     IonicModule.forRoot(MyApp),
+    ViewPersonPageModule,
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -38,6 +40,7 @@ import { MakeResPage } from '../pages/make-res/make-res';
     ReservationPage,
     DirectoryListPage,
     MakeResPage,
+    ViewPersonPage,
   ],
   providers: [
     StatusBar,  

@@ -6,41 +6,20 @@
 -->
 <ion-header>
 
-  <ion-navbar>
+  <ion-navbar color="dark">
     <ion-title>DirectoryList</ion-title>
   </ion-navbar>
 
 </ion-header>
-
-
-
 <ion-content padding>
   <ion-item-group>
       <ion-item-divider color="light">A</ion-item-divider>
-      <ion-item *ngFor="let p of people">
+      <ion-item *ngFor="let p of people" (click)="openModal(p)">
         <ion-avatar item-start>
-          <img src="http://www.nobles.edu/PeoplePhotos/{{DataProvider.PeopleID}}.jpeg">
-        </ion-avatar>
-        <h2>Ahan Sharma</h2>
-        <ion-note item-end>Class 3</ion-note>
-      </ion-item>
-      <ion-item-divider color="light">B</ion-item-divider>
-      <ion-item>
-        <ion-avatar item-start>
-          <img src="http://www.nobles.edu/PeoplePhotos/{{DataProvider.PeopleID}}.jpeg">
-        </ion-avatar>
-        <h2>Brohan Shrama</h2>
-        <ion-note item-end>Class 5</ion-note>
-      </ion-item>
-      <ion-item-divider color="light">C</ion-item-divider>
-      <ion-item>
-        <ion-avatar item-start>
-          <img src="http://www.nobles.edu/PeoplePhotos/{{DataProvider.PeopleID}}.jpeg">
-        </ion-avatar>
-        <h2>Crohan Sharma</h2>
-        <ion-note item-end>Class 5</ion-note>
+          <img src="http://www.nobles.edu/PeoplePhotos/{{p.id}}.jpeg">
+        </ion-avatar >
+        <h2>{{p.children[1].innerHTML}} {{p.children[0].innerHTML}}</h2>
+        <ion-note item-end>Class {{13-p.children[6].innerHTML}}</ion-note>
       </ion-item>
     </ion-item-group>
-  
-
 </ion-content>
