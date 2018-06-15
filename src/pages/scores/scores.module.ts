@@ -9,5 +9,8 @@ import { ScoresPage } from './scores';
   imports: [
     IonicPageModule.forChild(ScoresPage),
   ],
+  exports: [
+    ScoresPage
+  ]
 })
 export class ScoresPageModule {}

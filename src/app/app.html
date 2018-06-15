@@ -8,10 +8,12 @@
   <ion-content class="menu">
     <ion-list color="dark">
       <button menuClose padding ion-item detail-none class="topNav"(click)="openPage(otherPages[0])">
-        <ion-thumbnail>
-          <img src="http://www.nobles.edu/PeoplePhotos/{{DataProvider.PeopleID}}.jpeg" />
+        <!-- <ion-thumbnail> -->
+          <ion-avatar item-start>
+            <img src="http://www.nobles.edu/PeoplePhotos/{{DataProvider.PeopleID}}.jpeg" />
+          </ion-avatar>
           <!-- <img src="http://www.nobles.edu/PeoplePhotos/{{DataProvider.PeopleID}}.jpeg"/> -->
-        </ion-thumbnail>
+        <!-- </ion-thumbnail> -->
           <!-- <img src="http://www.nobles.edu/PeoplePhotos/{{DataProvider.PeopleID}}.jpeg"/></ion-thumbnail> -->
         <h2>{{DataProvider.FirstName}}</h2>
       </button>

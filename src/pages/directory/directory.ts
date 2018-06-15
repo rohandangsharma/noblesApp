@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, IonicPage } from 'ionic-angular';
 import { DataProvider } from '../../providers/data/data';
 import { HttpClient } from '@angular/common/http';
-import { DirectoryListPage } from '../directory-list/directory-list';
+// import { DirectoryListPage } from '../directory-list/directory-list';
 import { METHODS } from 'http';
 
 @IonicPage()
@@ -69,7 +69,7 @@ reset() {
 
   showList(){
     this.searchData= [this.firstName, this.lastName, this.gender, this.sport, this.class];
-    this.navCtrl.push(DirectoryListPage, {
+    this.navCtrl.push("DirectoryListPage", {
       result: this.filteredPeople
     });
   } 

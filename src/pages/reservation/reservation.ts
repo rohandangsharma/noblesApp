@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ToastController, ModalController, ViewController } from 'ionic-angular';
-import { MakeResPage } from '../make-res/make-res';
+// import { MakeResPage } from '../make-res/make-res';
 
 /**
  * Generated class for the ReservationPage page.
@@ -25,7 +25,7 @@ export class ReservationPage {
 
   openModal(characterNum) {
 
-    let modal = this.modalCtrl.create(MakeResPage);
+    let modal = this.modalCtrl.create("MakeResPage");
     modal.present();
   }
 

@@ -20,54 +20,53 @@
     <!-- <div class="bkg">
       
     </div> -->
-    <div class="bkg" style="background-image: url(http://www.nobles.edu/PeoplePhotos/{{this.PersonID}}.jpeg)"></div>
+    <div class="bkg" style="background-image: url(http://www.nobles.edu/PeoplePhotos/27453.jpeg)"></div>
     <div class="profile">
       <div class="circular--portrait">
           <img src="http://www.nobles.edu/PeoplePhotos/{{this.PeopleID}}.jpeg" />
       </div>
     </div>
-    
-
     <ion-content padding>
       <ion-grid>
         <ion-row>
             <ion-col>
               <button class="buttons" ion-button color="dark" clear icon-only>
-                <ion-icon name='md-chatbubbles' is-active="false"></ion-icon>
+                <a href="sms://+'{{this.Cell}}'">
+                <ion-icon name='md-chatbubbles' is-active="false"></ion-icon></a>
               </button>
             </ion-col>
             <ion-col>
               <button class="buttons" ion-button color="dark" clear icon-only>
-                <a href="tel:+900300400">
+                <a href="tel:+'{{this.Cell}}'">
                 <ion-icon name='md-call' is-active="false"></ion-icon></a>
               </button>
             </ion-col>
             <ion-col>
               <button class="buttons" ion-button color="dark" clear icon-only>
+                <a href="mailto:'{{this.Email}}'">
                 <ion-icon name='md-mail' is-active="false"></ion-icon>
+                </a>
               </button>
             </ion-col>
           </ion-row>
         </ion-grid>
-        
-        
-        <ion-item>
-            <ion-label stacked color="primary">Name</ion-label>
+        <ion-item *ngIf="showName">
+            <ion-label stacked color="primary" >Name</ion-label>
             <ion-label>{{this.FirstName}} {{this.LastName}}</ion-label>
         </ion-item>
-        <ion-item>
+        <ion-item *ngIf="showEmail">
             <ion-label stacked color="primary">Email</ion-label>
             <ion-label>{{this.Email}}</ion-label>
         </ion-item>
-        <ion-item>
-          <ion-label stacked color="primary">Cell Phone</ion-label>
+        <ion-item *ngIf="showCell">
+          <ion-label stacked color="primary" >Cell Phone</ion-label>
           <ion-label>{{this.Cell}}</ion-label>
         </ion-item>
-        <ion-item>
+        <ion-item *ngIf="showHome">
           <ion-label stacked color="primary">Home Phone</ion-label>
           <ion-label>{{this.Home}}</ion-label>
         </ion-item>
-        <ion-item>
+        <ion-item *ngIf="showAdd">
             <ion-label stacked color="primary">Address</ion-label>
             <ion-label>{{this.Address}}</ion-label>
         </ion-item>

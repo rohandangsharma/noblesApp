@@ -10,5 +10,8 @@ import { ReservationPage } from '../reservation/reservation';
   imports: [
     IonicPageModule.forChild(CastlePage),
   ],
+  exports: [
+    CastlePage
+  ]
 })
 export class CastlePageModule {}

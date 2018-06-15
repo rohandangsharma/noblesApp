@@ -9,5 +9,8 @@ import { MakeResPage } from './make-res';
   imports: [
     IonicPageModule.forChild(MakeResPage),
   ],
+  exports: [
+    MakeResPage
+  ]
 })
 export class MakeResPageModule {}

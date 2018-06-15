@@ -9,5 +9,8 @@ import { DirectoryListPage } from './directory-list';
   imports: [
     IonicPageModule.forChild(DirectoryListPage),
   ],
+  exports: [
+    DirectoryListPage
+  ]
 })
 export class DirectoryListPageModule {}

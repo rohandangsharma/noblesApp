@@ -9,5 +9,8 @@ import { UpcomingPage } from './upcoming';
   imports: [
     IonicPageModule.forChild(UpcomingPage),
   ],
+  exports: [
+    UpcomingPage
+  ]
 })
 export class UpcomingPageModule {}

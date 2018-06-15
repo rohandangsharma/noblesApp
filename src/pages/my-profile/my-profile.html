@@ -1,0 +1,109 @@
+<!--
+  Generated template for the ViewPersonPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="dark">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>About {{dataProvider.FirstName}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+  <!-- <div class="bkg">
+    
+  </div> -->
+  <div class="bkg" style="background-image: url(http://www.nobles.edu/PeoplePhotos/27453.jpeg)"></div>
+  <div class="profile">
+    <div class="circular--portrait">
+        <img src="http://www.nobles.edu/PeoplePhotos/{{dataProvider.PeopleID}}.jpeg" />
+    </div>
+  </div>
+  
+
+  <ion-content padding>
+    <ion-grid>
+      <ion-row>
+          <ion-col>
+            <button class="buttons" ion-button color="dark" clear icon-only>
+              <a href="this.sanitization.bypassSecurityTrustStyle(sms://+'{{dataProvider.Cell}}')">
+              <ion-icon name='md-chatbubbles' is-active="false"></ion-icon></a>
+            </button>
+          </ion-col>
+          <ion-col>
+            <button class="buttons" ion-button color="dark" clear icon-only>
+              <a href="tel:+'{{dataProvider.Cell}}'">
+              <ion-icon name='md-call' is-active="false"></ion-icon></a>
+            </button>
+          </ion-col>
+          <ion-col>
+            <button class="buttons" ion-button color="dark" clear icon-only>
+              <a href="mailto:'{{dataProvider.Email}}'">
+              <ion-icon name='md-mail' is-active="false"></ion-icon>
+              </a>
+            </button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+      <ion-segment [(ngModel)]="infoType">
+        <ion-segment-button value="public">Public</ion-segment-button>
+        <ion-segment-button value="personal">Personal</ion-segment-button>
+        </ion-segment>
+      <div [ngSwitch]="infoType">
+          <ion-list *ngSwitchCase="'public'">
+              <ion-item *ngIf="showName">
+                  <ion-label stacked color="primary">Name</ion-label>
+                  <ion-label>{{dataProvider.FirstName}} {{dataProvider.LastName}}</ion-label>
+              </ion-item>
+              <ion-item ngIf="showEmail">
+                  <ion-label stacked color="primary">Email</ion-label>
+                  <ion-label>{{dataProvider.Email}}</ion-label>
+              </ion-item>
+              <ion-item ngIf="showCell">
+                <ion-label stacked color="primary">Cell Phone</ion-label>
+                <ion-label>{{dataProvider.Cell}}</ion-label>
+              </ion-item>
+              <ion-item ngIf="showHome">
+                <ion-label stacked color="primary">Home Phone</ion-label>
+                <ion-label>{{dataProvider.Home}}</ion-label>
+              </ion-item>
+              <ion-item ngIf="showAdd">
+                  <ion-label stacked color="primary">Address</ion-label>
+                  <ion-label>{{dataProvider.Address}}</ion-label>
+              </ion-item>
+          </ion-list>
+          <ion-list *ngSwitchCase="'personal'">
+              <ion-item>
+                  <ion-label stacked color="primary">Assembly Seat</ion-label>
+                  <ion-label>{{dataProvider.AssemblySeat}}</ion-label>
+                </ion-item>
+              <ion-item>
+                  <ion-label stacked color="primary">Shattuck Locker #</ion-label>
+                  <ion-label>{{dataProvider.ShattuckNum}}</ion-label>
+              </ion-item>
+              <ion-item>
+                  <ion-label stacked color="primary">Shattuck Locker Combo</ion-label>
+                  <ion-label>{{dataProvider.ShattuckCombo}}</ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-label stacked color="primary">MAC Locker #</ion-label>
+                <ion-label>{{dataProvider.MACNum}}</ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-label stacked color="primary">MAC Locker Combo</ion-label>
+                <ion-label>{{dataProvider.MACCombo}}</ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-label stacked color="primary">MS Cubby Num</ion-label>
+                <ion-label>{{dataProvider.MSCubbyNum}}</ion-label>
+              </ion-item>
+          </ion-list>
+      </div>
+  </ion-content>
+</ion-content>

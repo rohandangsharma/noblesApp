@@ -9,5 +9,8 @@ import { MySportsPage } from './my-sports';
   imports: [
     IonicPageModule.forChild(MySportsPage),
   ],
+  exports: [
+    MySportsPage
+  ]
 })
 export class MySportsPageModule {}

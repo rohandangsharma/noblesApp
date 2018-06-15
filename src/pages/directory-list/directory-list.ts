@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
 import { DataProvider} from '../../providers/data/data';
-import { ViewPersonPage } from '../view-person/view-person';
+// import { ViewPersonPage } from '../view-person/view-person';
 
 /**
  * Generated class for the DirectoryListPage page.
@@ -17,8 +17,6 @@ import { ViewPersonPage } from '../view-person/view-person';
 })
 export class DirectoryListPage {
 
-  hello:string;
-
   people:Array<String>;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public DataProvider: DataProvider, public modalCtrl: ModalController) {
@@ -32,7 +30,7 @@ export class DirectoryListPage {
 
   openModal(p) {
 
-    let modal = this.modalCtrl.create(ViewPersonPage, { person: p });
+    let modal = this.modalCtrl.create("ViewPersonPage", { person: p });
     modal.present();
   }
 }

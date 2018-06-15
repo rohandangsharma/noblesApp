@@ -8,39 +8,19 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { DataProvider } from '../providers/data/data';
 
-//pages
-import { SchedulePage } from '../pages/schedule/schedule';
-import { DirectoryPage } from '../pages/directory/directory';
-import { AthleticsPage } from '../pages/athletics/athletics';
-import { CalendarPage } from '../pages/calendar/calendar';
-import { CastlePage } from '../pages/castle/castle';
-import { ViewPersonPage } from '../pages/view-person/view-person';
-import { ReservationPage } from '../pages/reservation/reservation';
-import { DirectoryListPage } from '../pages/directory-list/directory-list';
-import { MakeResPage } from '../pages/make-res/make-res';
-import { ViewPersonPageModule } from '../pages/view-person/view-person.module';
-
 @NgModule({
   declarations: [
     MyApp,
-    ReservationPage,
-    DirectoryListPage,
-    MakeResPage,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     FormsModule,
     IonicModule.forRoot(MyApp),
-    ViewPersonPageModule,
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    ReservationPage,
-    DirectoryListPage,
-    MakeResPage,
-    ViewPersonPage,
   ],
   providers: [
     StatusBar,  

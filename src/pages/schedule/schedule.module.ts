@@ -9,7 +9,8 @@ import { SchedulePage } from './schedule';
   imports: [
     IonicPageModule.forChild(SchedulePage),
   ],
-  providers: [
+  exports: [
+    SchedulePage
   ]
 })
 export class SchedulePageModule {}

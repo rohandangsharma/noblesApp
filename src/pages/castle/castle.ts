@@ -3,7 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { DataProvider } from '../../providers/data/data';
 import { HttpClient } from '@angular/common/http';
 import { CastlePageModule } from './castle.module';
-import { ReservationPage } from '../reservation/reservation'
+// import { ReservationPage } from '../reservation/reservation'
 
 /**
  * Generated class for the CastlePage page.
@@ -79,7 +79,7 @@ export class CastlePage {
   }
 
   openReservation() {
-    this.navCtrl.push(ReservationPage)
+    this.navCtrl.push("ReservationPage")
   }
 
   

@@ -17,7 +17,7 @@
       <ion-item *ngFor="let p of people" (click)="openModal(p)">
         <ion-avatar item-start>
           <img src="http://www.nobles.edu/PeoplePhotos/{{p.id}}.jpeg">
-        </ion-avatar >
+        </ion-avatar>
         <h2>{{p.children[1].innerHTML}} {{p.children[0].innerHTML}}</h2>
         <ion-note item-end>Class {{13-p.children[6].innerHTML}}</ion-note>
       </ion-item>

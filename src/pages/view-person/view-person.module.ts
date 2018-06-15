@@ -9,5 +9,8 @@ import { ViewPersonPage } from './view-person';
   imports: [
     IonicPageModule.forChild(ViewPersonPage),
   ],
+  exports: [
+    ViewPersonPage
+  ]
 })
 export class ViewPersonPageModule {}
